@@ -1,0 +1,5956 @@
+* 함수
+
+- 함수정의: 함수의 동작과정 설명(비유: DNA)
+
+- 함수호출
+
+  = 방법: 함수이름+괄호
+
+  = 함수시작
+
+  = 괄호 안에 값을 전달해야함
+
+    type X, 수식 X, 변수 X, 함수호출 X
+
+  = 호출한 함수는 호출된 함수가
+
+    종료될 때까지 정지
+
+  = 인자값은 변수에 저장되어 전달된다.
+
+- 함수반환
+
+  = return을 수행하면 함수종료
+
+  = 함수호출-->값 (일반적으로 return 값)
+
+  = return <없음> : None
+
+
+
+함수정의
+
+def f_name(arguments):
+
+    statement
+
+    statement
+
+    statement
+
+- arguments의 개수는 0이상
+
+함수호출
+
+f_name( 값 )
+
+------------------------------
+
+def funct(a,b):
+
+    print a+b
+
+funct( 3, 7 )
+
+-----------------------------
+
+함수의 반환
+
+-----------------------------
+
+def funct(a,b):
+
+    return a+b
+
+print 'a+b =', funct(3,7)
+
+-----------------------------
+
+-------------------------------
+
+def absolute(v):
+
+    if v>=0:
+
+        return v
+
+    else:
+
+        return -v
+
+v = input('input a number >> ')
+
+print 'abs(v) =', absolute(v)
+
+--------------------------------
+
+--------------------------------
+
+def sum():
+
+    i=1
+
+    s=0
+
+    while i<11:
+
+        s=s+i
+
+        i=i+1
+
+    return s
+
+print sum()
+
+--------------------------------
+
+--------------------------------
+
+def sum(beg,end):
+
+    i=beg
+
+    s=0
+
+    while i<=end:
+
+        s=s+i
+
+        i=i+1
+
+    return s
+
+print sum(1,20)
+
+--------------------------------
+
+--------------------------------
+
+def f():
+
+    return
+
+print f() # None
+
+-------------------------------
+
+* 함수호출구조
+
+---------------------------------
+
+def square(x):
+
+    return x*x
+
+print square(2.5)
+
+--------------------------------
+
+---------------------------------
+
+def square(x):
+
+    return x*x
+
+def circle(radius):
+
+    return 3.14 * square(radius)
+
+print circle(2.5)
+
+---------------------------------
+
+---------------------------------
+
+def square(x):
+
+    return x*x
+
+def pi(v):
+
+    return 3.14 * v
+
+sq = square(2.5)
+
+area = pi( sq )
+
+print area
+
+---------------------------------
+
+---------------------------------
+
+def square(x):
+
+    return x*x
+
+def pi(v):
+
+    return 3.14 * v
+
+area = pi( square(2.5) )
+
+print area
+
+---------------------------------
+
+--------------------------------
+
+def square(r):  #1
+
+    return r * r
+
+def circle(radius):  #2
+
+    return 3.14 * square(radius)
+
+def cone(area,height):  #3
+
+    return area * height / 3.0
+
+# 4
+
+print cone(circle(2.5),3.5)
+
+--------------------------------
+
+==================================
+
+a = input('input a number >> ');
+
+if a==1:
+
+    print 'a==one'
+
+else:
+
+    print 'a!=one'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+if not(a==1):
+
+    print 'a!=one'
+
+else:
+
+    print 'a==one'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+if a!=1:
+
+    print 'a!=one'
+
+else:
+
+    print 'a==one'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+if a==1:
+
+    print 'a==one'
+
+if not(a==1):
+
+    print 'a!=one'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+if a==1:
+
+    print 'a==one'
+
+if a!=1:
+
+    print 'a!=one'
+
+==================================
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1 and b==1:
+
+    print 'a==one and b==1'
+
+else:
+
+    print 'a!=one or b!=1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if not(a==1 and b==1):
+
+    print 'a!=one or b!=1'
+
+else:
+
+    print 'a==one and b==1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a!=1 or b!=1:
+
+    print 'a!=one or b!=1'
+
+else:
+
+    print 'a==one and b==1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1 and b==1:
+
+    print 'a==one and b==1'
+
+if not(a==1 and b==1):
+
+    print 'a!=one or b!=1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1 and b==1:
+
+    print 'a==one and b==1'
+
+if a!=1 or b!=1:
+
+    print 'a!=one or b!=1'
+
+=================================
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1:
+
+    if b==1:
+
+        print 'a==one and b==1'
+
+    if b!=1:
+
+        print 'a==one and b!=1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1:
+
+    if a==1 and b==1:
+
+        print 'a==one and b==1'
+
+    if a==1 and b!=1:
+
+        print 'a==one and b!=1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1 and b==1:
+
+    print 'a==one and b==1'
+
+if a==1 and b!=1:
+
+    print 'a==one and b!=1'
+
+=================================
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1:
+
+    if b==1:
+
+        print 'a==one and b==1'
+
+    else:
+
+        print 'a==one and b!=1'
+
+----------------------------------
+
+a = input('input a number >> ');
+
+b = input('input a number >> ');
+
+if a==1 and b==1:
+
+    print 'a==one and b==1'
+
+elif a==1:
+
+    print 'a==one and b!=1'
+
+
+
+- 위 변환의 증명
+
+=================================
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+elif a==1:
+
+    print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+else:
+
+    if a==1:
+
+        print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if not(a==1 and b==1):
+
+    if a==1:
+
+        print 'a==one and b!=one'
+
+
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if a!=1 or b!=1:
+
+    if a==1:
+
+        print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if a!=1 or b!=1:
+
+    if (a!=1 or b!=1) and a==1:
+
+        print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if (a!=1 or b!=1) and a==1:
+
+    print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if a!=1 and a==1 or b!=1 and a==1:
+
+    print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if False or b!=1 and a==1:
+
+    print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if b!=1 and a==1:
+
+    print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1 and b==1:
+
+    print 'a==one and b==one'
+
+if a==1 and b!=1:
+
+    print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1:
+
+    if b==1:
+
+        print 'a==one and b==one'
+
+    if b!=1:
+
+        print 'a==one and b!=one'
+
+---------------------------------
+
+if a==1:
+
+    if b==1:
+
+        print 'a==one and b==one'
+
+    else:
+
+        print 'a==one and b!=one'
+
+---------------------------------
+
+
+
+- 위 변환의 활용
+
+=================================
+
+
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2, a==m of 3'
+
+elif a%2==0:
+
+    print 'a==m of 2, a!=m of 3'
+
+if a%2!=0 and a%3!=0:
+
+    print 'a!=m of 2, a!=m of 3'
+
+elif a%2!=0:
+
+    print 'a!=m of 2, a==m of 3'
+
+* 동시 실행 가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+if a%2==0:
+
+    print 'a==m of 2'
+
+if a%3==0:
+
+    print 'a==m of 3'
+
+if a%2!=0 and a%3!=0:
+
+    print 'a==other'
+
+* 동시 실행 가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+if a%2==0:
+
+    print 'a==m of 2'
+
+if a%3==0:
+
+    print 'a==m of 3'
+
+if a%2!=0 and a%3!=0:
+
+    print 'a==other'
+
+* 동시 실행 불가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+if a%2==0 and a%3!=0:
+
+    print 'a==m of 2'
+
+if a%2!=0 and a%3==0:
+
+    print 'a==m of 3'
+
+if a%2!=0 and a%3!=0:
+
+    print 'a==other'
+
+* 동시 실행 불가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+if a%2==0 and a%3!=0:
+
+    print 'a==m of 2'
+
+if a%2!=0 and a%3==0:
+
+    print 'a==m of 3'
+
+if a%2!=0 and a%3!=0:
+
+    print 'a==other'
+
+* 동시 실행 불가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+elif a%2==0:
+
+    print 'a==m of 2'
+
+elif a%3==0:
+
+    print 'a==m of 3'
+
+else:
+
+    print 'a==other'
+
+* 동시 실행 불가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+elif a%2==0:
+
+    print 'a==m of 2'
+
+if a%2!=0 and a%3==0:
+
+    print 'a==m of 3'
+
+elif a%2!=0:
+
+    print 'a==other'
+
+
+
+* 동시 실행 불가능한 경우
+
+=================================
+
+a = input('input a number >> ');
+
+if a%2==0 and a%3==0:
+
+    print 'a==m of 2 and a==m of 3'
+
+if a%2==0 and a%3!=0:
+
+    print 'a==m of 2'
+
+if a%2!=0 and a%3==0:
+
+    print 'a==m of 3'
+
+elif a%2!=0:
+
+    print 'a==other'
+
+
+
+
+
+* 배타적 실행
+
+
+
+
+
+
+
+- 동시 실행 가능
+
+
+
+================================
+
+
+
+a = input('Input a number >> ')
+
+
+
+
+
+
+
+if a%3==0:
+
+
+
+    print '333'
+
+
+
+if a%2==0:
+
+
+
+    print '222'
+
+
+
+--------------------------------
+
+
+
+a = input('Input a number >> ')
+
+
+
+
+
+
+
+if a%2==0:
+
+
+
+    print '222'
+
+
+
+if a%3==0:
+
+
+
+    print '333'
+
+
+
+--------------------------------
+
+
+
+
+
+
+
+- 동시 실행 불가능 --> 배타적 실행
+
+================================
+
+a = input('Input a number >> ')
+
+
+
+if a%2!=0:
+
+    print 'odd'
+
+if a%4==0:
+
+    print '444'
+
+--------------------------------
+
+a = input('Input a number >> ')
+
+
+
+if a%4==0:
+
+    print '444'
+
+if a%2!=0:
+
+    print 'odd'
+
+--------------------------------
+
+a = input('Input a number >> ')
+
+
+
+if a%4==0:
+
+    print '444'
+
+else:
+
+    print 'not 4'
+
+--------------------------------
+
+a = input('Input a number >> ')
+
+
+
+if a%4!=0:
+
+    print 'not 4'
+
+else:
+
+    print '444'
+
+
+
+
+
+* 반복
+
+별표 10번 출력하기
+
+================================
+
+i=0
+
+while i<10:
+
+    print '*', # 0 1 2 3 4 5 6 7 8 9
+
+    i=i+1
+
+print
+
+
+
+i=1
+
+while i<11:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+i=2
+
+while i<12:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+i=3
+
+while i<13:
+
+    print '*',
+
+    i=i+1
+
+print
+
+--------------------------------
+
+i=0
+
+while i<=9:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+i=1
+
+while i<=10:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+i=2
+
+while i<=11:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+i=3
+
+while i<=12:
+
+    print '*',
+
+    i=i+1
+
+print
+
+--------------------------------
+
+i=9
+
+while i>=0:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+i=8
+
+while i>=-1:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+i=7
+
+while i>=-2:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+i=6
+
+while i>=-3:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+--------------------------------
+
+i=9
+
+while i>-1:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+i=10
+
+while i>0:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+i=11
+
+while i>1:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+i=12
+
+while i>2:
+
+    print '*',
+
+    i=i-1
+
+print
+
+
+
+* 여러개의 조건을 모두 알고 싶을 때
+
+======================================
+
+i=7
+
+while __?__:
+
+    print '*',
+
+    i=i+4
+
+print
+
+--------------------------------------
+
+#     1  2   3   .... 10  11
+
+# i = 7, 11, 15, .... 43, (47)
+
+#                    true false
+
+# i<43,  i<44,  i<45,  i<46,  i<47
+
+# i<=43, i<=44, i<=45, i<=46, i<=47
+
+# i<44,  i<45,  i<46,  i<47
+
+# i<=43, i<=44, i<=45, i<=46
+
+* 하나의 조건만 구하면 될 때
+
+======================================
+
+i=7
+
+while __?__:
+
+    print '*',
+
+    i=i+4
+
+print
+
+--------------------------------------
+
+i=0*4+7
+
+while i<10*4+7:
+
+    print '*',
+
+    i=i+4
+
+print
+
+--------------------------------------
+* 윤년판별
+
+
+
+- 조건1
+
+1) 정수를 입력받아 y에 저장한다.
+
+2) y가 4의 배수이면 
+
+   'leap'를 출력하고
+
+   그렇지 않으면
+
+   'not leap'을 출력한다.
+
+
+
+- 조건2
+
+1) 정수를 입력받아 y에 저장한다.
+
+2) y가 4의 배수이면 
+
+   'leap'를 출력하고
+
+   그렇지 않으면
+
+   'not leap'을 출력한다.
+
+3) 단, 위 조건을 만족할 때
+
+   y가 100의 배수이면
+
+   'not leap'을 출력하고
+
+   그렇지 않으면
+
+   'leap'
+
+
+
+
+
+- 조건3
+
+1) 정수를 입력받아 y에 저장한다.
+
+2) y가 4의 배수이면 
+
+   'leap'를 출력하고
+
+   그렇지 않으면
+
+   'not leap'을 출력한다.
+
+3) 단, 위 조건을 만족할 때
+
+   y가 100의 배수이면
+
+   'not leap'을 출력하고
+
+   그렇지 않으면
+
+   'leap'
+
+4) 단, 바로 위 조건을 만족할 때
+
+   y가 400의 배수이면
+
+   'leap'을 출력하고
+
+   그렇지 않으면
+
+   'not leap'
+
+
+
+================================
+
+y = input('input a year >> ')
+
+
+
+if y%4==0:
+
+    if y%100==0:
+
+        if y%400==0:
+
+            print 'leap'
+
+        else:
+
+            print 'not leap'
+
+    else:
+
+        print 'leap'
+
+else:
+
+    print 'not leap'
+
+--------------------------------
+
+
+
+(y%4==0 and y%100==0 and y%400==0) or (y%4==0 and y%100!=0)
+
+y%4==0 and ((y%100==0 and y%400==0) or y%100!=0)
+
+y%4==0 and ((y%100==0 or y%100!=0) and (y%400==0 or y%100!=0))
+
+y%4==0 and (True and (y%400==0 or y%100!=0))
+
+y%4==0 and (y%400==0 or y%100!=0)
+
+y%4==0 and y%400==0 or y%4==0 and y%100!=0
+
+y%400==0 or y%4==0 and y%100!=0
+
+y%4==0 and y%100!=0 or y%400==0
+
+
+
+================================
+
+y = input('input a year >> ')
+
+
+
+if y%4==0 and y%100!=0 or y%400==0:
+
+    print 'leap'
+
+else:
+
+    print 'not leap'
+
+--------------------------------
+
+
+
+
+
+* 진리값 변화
+
+
+
+* ==True, !=False <==> 생략
+
+================================
+
+a = input('input a T/F value >> ')
+
+
+
+if a==True:
+
+    print 'a==True'
+
+else:
+
+    print 'a==False'
+
+
+
+if a!=False:
+
+    print 'a==True'
+
+else:
+
+    print 'a==False'
+
+
+
+if a:
+
+    print 'a==True'
+
+else:
+
+    print 'a==False'
+
+--------------------------------
+
+
+
+
+
+* !=True, ==False <==> not
+
+================================
+
+if a!=True:
+
+    print 'a==True'
+
+else:
+
+    print 'a==False'
+
+
+
+if a==False:
+
+    print 'a==True'
+
+else:
+
+    print 'a==False'
+
+
+
+if not a:
+
+    print 'a==True'
+
+else:
+
+    print 'a==False'
+
+--------------------------------
+
+
+
+- 짝/홀수 판별
+
+================================
+
+def is_even(n):
+
+    if a%2==0:
+
+        return True
+
+    else:
+
+        return False
+
+
+
+a = input('input a number >> ')
+
+
+
+if a%2==0:
+
+    print 'even'
+
+else:
+
+    print 'odd'
+
+
+
+
+
+if is_even(a):
+
+    print 'even'
+
+else:
+
+    print 'odd'
+
+--------------------------------
+
+def is_even(n):
+
+    return a%2==0
+
+
+
+a = input('input a number >> ')
+
+
+
+if a%2==0:
+
+    print 'even'
+
+else:
+
+    print 'odd'
+
+
+
+
+
+if is_even(a):
+
+    print 'even'
+
+else:
+
+    print 'odd'
+
+--------------------------------
+
+def f(n):
+
+    return a%2==0
+
+
+
+a = input('input a number >> ')
+
+
+
+if a%2==0:
+
+    print 'even'
+
+else:
+
+    print 'odd'
+
+
+
+
+
+if f(a):
+
+    print 'even'
+
+else:
+
+    print 'odd'
+
+--------------------------------
+
+
+
+
+
+
+
+* 도형출력
+
+
+
+- n개의 별 출력
+
+================================
+
+n=11
+
+
+
+i=0
+
+while i<n:
+
+    print '*',
+
+    i=i+1
+
+print
+
+--------------------------------
+
+
+
+- n1개의 점 출력, n2개의 별 출력
+
+================================
+
+n=11
+
+n1=3
+
+n2=7
+
+
+
+i=0
+
+while i<n1:
+
+    print '.',
+
+    i=i+1
+
+i=0
+
+while i<n2:
+
+    print '*',
+
+    i=i+1
+
+print
+
+--------------------------------
+
+
+
+. . . * * *
+
+. . * * * *
+
+. * * * * *
+
+================================
+
+n1=3
+
+n2=3
+
+
+
+i=0
+
+while i<n1:
+
+    print '.',
+
+    i=i+1
+
+i=0
+
+while i<n2:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+n1=2
+
+n2=4
+
+
+
+i=0
+
+while i<n1:
+
+    print '.',
+
+    i=i+1
+
+i=0
+
+while i<n2:
+
+    print '*',
+
+    i=i+1
+
+print
+
+
+
+n1=1
+
+n2=5
+
+
+
+i=0
+
+while i<n1:
+
+    print '.',
+
+    i=i+1
+
+i=0
+
+while i<n2:
+
+    print '*',
+
+    i=i+1
+
+print
+
+--------------------------------
+
+
+
+jn1n2
+
+-----------------------
+
+033
+
+124
+
+215
+
+
+
+j=0
+
+while j<3:
+
+    n1=3-j
+
+    n2=3+j
+
+
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    print
+
+
+
+    j=j+1
+
+
+
+
+
+
+
+
+
+
+
+* 모듈화
+=================================
+
+. . . * * *
+
+. . * * * *
+
+. * * * * *
+
+---------------------------------
+
+
+
+jn1n2
+
+-----------------------
+
+033
+
+124
+
+215
+
+
+
+================================
+
+j=0
+
+while j<3:
+
+    n1=3-j
+
+    n2=3+j
+
+
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    print
+
+
+
+    j=j+1
+
+--------------------------------
+
+
+
+================================
+
+* . . . . . . . . .
+
+* * . . . . . . . .
+
+* * * . . . . . . .
+
+* * * * . . . . . .
+
+* * * * * . . . . .
+
+* * * * * * . . . .
+
+* * * * * * * . . .
+
+* * * * * * * * . .
+
+* * * * * * * * * .
+
+* * * * * * * * * *
+
+--------------------------------
+
+
+
+jn1n2
+
+-----------------------
+
+019
+
+128
+
+237
+
+.........
+
+9100
+
+
+
+n1 = 1+j
+
+n2 = 9-j
+
+
+
+================================
+
+j=0
+
+while j<10:
+
+    n1 = 1+j
+
+    n2 = 9-j
+
+
+
+    i=0
+
+    while i<n1:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+
+
+    j=j+1
+
+--------------------------------
+
+
+
+. . . . . . . . . .
+
+. . . . . . . . . *
+
+. . . . . . . . * *
+
+. . . . . . . * * *
+
+. . . . . . * * * *
+
+. . . . . * * * * *
+
+. . . . * * * * * *
+
+. . . * * * * * * *
+
+. . * * * * * * * *
+
+. * * * * * * * * *
+
+* * * * * * * * * *
+
+
+
+jn1n2
+
+-----------------------
+
+0100
+
+191
+
+282
+
+.........
+
+10010
+
+
+
+n1 = 10-j
+
+n2 = 0+j
+
+
+
+================================
+
+j=0
+
+while j<11:
+
+    n1 = 10-j
+
+    n2 = 0+j
+
+
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    print
+
+
+
+    j=j+1
+
+--------------------------------
+
+
+
+. . . . . . . . . * . . . . . . . . . 
+
+. . . . . . . . * * * . . . . . . . . 
+
+. . . . . . . * * * * * . . . . . . . 
+
+. . . . . . * * * * * * * . . . . . . 
+
+. . . . . * * * * * * * * * . . . . . 
+
+. . . . * * * * * * * * * * * . . . . 
+
+. . . * * * * * * * * * * * * * . . . 
+
+. . * * * * * * * * * * * * * * * . . 
+
+. * * * * * * * * * * * * * * * * * . 
+
+* * * * * * * * * * * * * * * * * * * 
+
+
+
+jn1n2n3
+
+-----------------------------
+
+0919
+
+1838
+
+2757
+
+............
+
+90190
+
+
+
+n1 = 9 - j
+
+n2 = 1 + 2*j
+
+n3 = 9 - j
+
+
+
+================================
+
+j=0
+
+while j<10:
+
+    n1 = 9 - j
+
+    n2 = 1 + 2*j
+
+    n3 = 9 - j
+
+    
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+
+
+    j=j+1
+
+--------------------------------
+
+
+
+================================
+
+i=0
+
+while i<10:
+
+   print '.',
+
+   i=i+1
+
+
+
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+i=0
+
+while i<len(a):
+
+    ai = a[i]
+
+    print '.',
+
+    i=i+1
+
+
+
+
+
+a = range(0,10)  # [0,10)
+
+i=0
+
+while i<len(a):
+
+    ai = a[i]
+
+    print '.',
+
+    i=i+1
+
+
+
+
+
+a = range(10)  # [0,10)
+
+for ai in a:
+
+    print '.',
+
+
+
+
+
+for ai in range(10):
+
+    print '.',
+
+
+
+
+
+for i in range(10):
+
+    print '.',
+
+--------------------------------
+
+
+
+================================
+
+for j in range(10):
+
+    n1 = 9 - j
+
+    n2 = 1 + 2*j
+
+    n3 = 9 - j
+
+    
+
+    for i in range(n1):
+
+        print '.',
+
+    for i in range(n2):
+
+        print '*',
+
+    for i in range(n3):
+
+        print '.',
+
+    print
+
+--------------------------------
+
+
+
+. . . . . . . . . * . . . . . . . . . 
+
+. . . . . . . . * * * . . . . . . . . 
+
+. . . . . . . * * * * * . . . . . . . 
+
+. . . . . . * * * * * * * . . . . . . 
+
+. . . . . * * * * * * * * * . . . . . 
+
+. . . . * * * * * * * * * * * . . . . 
+
+. . . * * * * * * * * * * * * * . . . 
+
+. . * * * * * * * * * * * * * * * . . 
+
+. * * * * * * * * * * * * * * * * * . 
+
+* * * * * * * * * * * * * * * * * * * 
+
+. * * * * * * * * * * * * * * * * * . 
+
+. . * * * * * * * * * * * * * * * . . 
+
+. . . * * * * * * * * * * * * * . . . 
+
+. . . . * * * * * * * * * * * . . . . 
+
+. . . . . * * * * * * * * * . . . . . 
+
+. . . . . . * * * * * * * . . . . . . 
+
+. . . . . . . * * * * * . . . . . . . 
+
+. . . . . . . . * * * . . . . . . . . 
+
+. . . . . . . . . * . . . . . . . . . 
+
+
+
+
+
+================================
+
+for j in range(10):
+
+    n1 = 9 - j
+
+    n2 = 1 + 2*j
+
+    n3 = 9 - j
+
+    
+
+    for i in range(n1):
+
+        print '.',
+
+    for i in range(n2):
+
+        print '*',
+
+    for i in range(n3):
+
+        print '.',
+
+    print
+
+
+
+for j in range(9):
+
+    n1 = 1+j
+
+    n2 = 17-2*j
+
+    n3 = 1+j
+
+    
+
+    for i in range(n1):
+
+        print '.',
+
+    for i in range(n2):
+
+        print '*',
+
+    for i in range(n3):
+
+        print '.',
+
+    print
+
+--------------------------------
+
+
+
+. . . . * . . . . 
+
+. . . . * . . . . 
+
+. . . * * * . . . 
+
+. . . * * * . . . 
+
+. . * * * * * . . 
+
+. . * * * * * . . 
+
+. * * * * * * * . 
+
+. * * * * * * * . 
+
+* * * * * * * * * 
+
+
+
+jn1n2n3
+
+-----------------------------
+
+0414
+
+1414
+
+2333
+
+3333
+
+4252
+
+5252
+
+6171
+
+7171
+
+8090
+
+
+
+n1 = 4-j/2
+
+n2 = 1 + j/2 + j/2
+
+n3 = 4-j/2
+
+
+
+jj/24-j/2
+
+---------------------
+
+004
+
+104
+
+213
+
+313
+
+422
+
+522
+
+631
+
+731
+
+840
+
+
+
+================================
+
+for j in range(9):
+
+    n1 = 4-j/2
+
+    n2 = 1 + 2*(j/2)
+
+    n3 = 4-j/2
+
+    
+
+    for i in range(n1):
+
+        print '.',
+
+    for i in range(n2):
+
+        print '*',
+
+    for i in range(n3):
+
+        print '.',
+
+    print
+
+--------------------------------
+
+
+
+. . . . * . . . . 
+
+. . . * * * . . . 
+
+. . . * * * . . . 
+
+. . * * * * * . . 
+
+. . * * * * * . . 
+
+. * * * * * * * . 
+
+. * * * * * * * . 
+
+* * * * * * * * * 
+
+* * * * * * * * * 
+
+
+
+jn1n2n3
+
+-----------------------------
+
+0414
+
+1333
+
+2333
+
+3252
+
+4252
+
+5171
+
+6171
+
+7090
+
+7090
+
+
+
+n1 = 4-(j+1)/2
+
+n2 = 1 + (j+1)/2*2
+
+n3 = 4-(j+1)/2
+
+
+
+
+
+jj/2(j+1)/2   4-(j+1)/2
+
+----------------------------------
+
+0004
+
+1013
+
+2113
+
+3122
+
+4222
+
+5231
+
+6331
+
+7340
+
+8440
+
+
+
+================================
+
+for j in range(9):
+
+    n1 = 4-(j+1)/2
+
+    n2 = 1 + (j+1)/2*2
+
+    n3 = 4-(j+1)/2
+
+    
+
+    for i in range(n1):
+
+        print '.',
+
+    for i in range(n2):
+
+        print '*',
+
+    for i in range(n3):
+
+        print '.',
+
+    print
+
+--------------------------------
+
+* 수열의 출력
+
+
+
+=============================================
+
+print 1,
+
+print 2,
+
+print 3,
+
+print 4,
+
+print 5,
+
+print 
+
+
+
+i=1
+
+print i, # print 1
+
+i=i+1    # i==2
+
+print i, # print 2
+
+i=i+1    # i==3
+
+print i, # print 3
+
+i=i+1    # i==4
+
+print i, # print 4
+
+i=i+1    # i==5
+
+print i, # print 5
+
+i=i+1    # i==6
+
+print
+
+
+
+i=1
+
+while i<=5: # i<6
+
+    print i,
+
+    i=i+1
+
+print
+
+
+
+---------------------------------------------
+
+
+
+* 수열의 합
+
+
+
+1 4 7 10 13(5번째항)
+
+=============================================
+
+print 1,
+
+print 4,
+
+print 7,
+
+print 10,
+
+print 13,
+
+print
+
+---------------------------------------------
+
+ai = 1
+
+print ai,
+
+ai = ai + 3
+
+print ai,
+
+ai = ai + 3
+
+print ai,
+
+ai = ai + 3
+
+print ai,
+
+ai = ai + 3
+
+print ai,
+
+ai = ai + 3
+
+print
+
+---------------------------------------------
+
+ai = 1
+
+i=0
+
+while i<5:
+
+    print ai,
+
+    ai = ai + 3
+
+    i=i+1
+
+print 
+
+---------------------------------------------
+
+
+
+=============================================
+
+print 1,
+
+print 4,
+
+print 7,
+
+print 10,
+
+print 13,
+
+print
+
+---------------------------------------------
+
+i=0
+
+ai = 1+3*i
+
+print ai,
+
+i=i+1
+
+ai = 1+3*i
+
+print ai,
+
+i=i+1
+
+ai = 1+3*i
+
+print ai,
+
+i=i+1
+
+ai = 1+3*i
+
+print ai,
+
+i=i+1
+
+ai = 1+3*i
+
+print ai,
+
+i=i+1
+
+print
+
+---------------------------------------------
+
+i=0
+
+while i<5:
+
+    ai = 1+3*i
+
+    print ai,
+
+    i=i+1
+
+print 
+
+---------------------------------------------
+
+
+
+=============================================
+
+i=0
+
+s=0
+
+while i<5:
+
+    ai = 1+3*i
+
+    print ai,
+
+    i=i+1
+
+print
+
+---------------------------------------------
+
+i=0
+
+s=0
+
+ai = 1+3*i
+
+while ai<=13:
+
+    print ai,
+
+    i=i+1
+
+    ai = 1+3*i
+
+print
+
+---------------------------------------------
+
+i=0
+
+s=0
+
+ai = 1
+
+while i<5:
+
+    print ai,
+
+    ai = ai + 3
+
+    i=i+1
+
+print
+
+---------------------------------------------
+
+s=0
+
+ai = 1
+
+while ai<=13:
+
+    print ai,
+
+    ai = ai + 3
+
+print
+
+---------------------------------------------
+
+
+
+=============================================
+
+---------------------------------------------
+
+
+
+
+
+=============================================
+
+---------------------------------------------
+
+
+
+
+
+=============================================
+
+---------------------------------------------
+
+
+
+
+
+=============================================
+
+---------------------------------------------
+
+
+
+
+
+=============================================
+
+---------------------------------------------
+
+
+
+
+
+=============================================
+
+---------------------------------------------
+
+
+
+
+
+* break/continue
+
+
+
+* 함수화
+
+
+
+* list 인자 전달
+
+
+
+* call by value (scalar type)
+
+
+
+* call by reference (structure type)
+
+
+
+* 전역변수
+
+* break/continue
+
+
+
+===========================================
+
+i=1
+
+while i<=10:
+
+    print 'i ==',
+
+    if i%7==0:
+
+        break
+
+    print i
+
+    i=i+1
+
+print 'END'
+
+-------------------------------------------
+
+i=1
+
+while i<=10:
+
+    print 'i ==',
+
+    if i%7==0:
+
+        i=i+1
+
+        continue
+
+    print i
+
+    i=i+1
+
+print 'END'
+
+-------------------------------------------
+
+주의) 무한 루프
+
+i=1
+
+while i<=10:
+
+    print 'i ==',
+
+    if i%7==0:
+
+        continue
+
+    print i
+
+    i=i+1
+
+print 'END'
+
+------------------------------------------
+
+i=1
+
+while i<=10:
+
+    print 'i ==',
+
+    print i
+
+    i=i+1
+
+print 'END'
+
+
+
+for i in range(1,11):
+
+    print 'i ==',
+
+    print i
+
+print 'END'
+
+------------------------------------------
+
+for i in range(1,11):
+
+    print 'i ==',
+
+    if i%7==0:
+
+        break;
+
+    print i
+
+print 'END'
+
+------------------------------------------
+
+for i in range(1,11):
+
+    print 'i ==',
+
+    if i%7==0:
+
+        continue;
+
+    print i
+
+print 'END'
+
+------------------------------------------
+
+
+
+
+
+
+
+* 함수의 형태
+
+
+
+1. None 반환 함수
+
+========================================
+
+def f(n):   #1
+
+    i=0
+
+    while i<n:
+
+        print i,
+
+        i=i+1
+
+    print
+
+    return
+
+
+
+#2
+
+f(10)
+
+
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+
+
+
+
+2. 진리값 반환 함수
+
+========================================
+
+def is_even(n):  #1
+
+    if n%2==0:
+
+        return True
+
+    else:
+
+        return False   # else return
+
+
+
+# 2
+
+print is_even(7)
+
+print is_even(6)
+
+
+
+# CS: 2 1 1
+
+# CN: 3
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    if n%2==0:
+
+        return True
+
+    return False    # 무조건 return
+
+
+
+# 2
+
+print is_even(7)
+
+print is_even(6)
+
+
+
+# CS: 2 1 1
+
+# CN: 3
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    return n%2==0
+
+
+
+# 2
+
+print is_even(7)
+
+print is_even(6)
+
+
+
+# CS: 2 1 1
+
+# CN: 3
+
+# CD: 2
+
+========================================
+
+def is_even(n):  #1
+
+    return n%2==0
+
+
+
+# 2
+
+v = input(">> ")
+
+if is_even(v):
+
+    print '%d: even'%v
+
+else:
+
+    print '%d: odd'%v
+
+   
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    return n%2==0
+
+
+
+# 2
+
+v = input(">> ")
+
+if not is_even(v):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+   
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    return not(n%2==0)
+
+
+
+# 2
+
+v = input(">> ")
+
+if is_even(v):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+   
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    if n%2==0:
+
+        return True
+
+    return False
+
+
+
+# 2
+
+v = input(">> ")
+
+if not is_even(v):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+
+
+
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    if n%2==0:
+
+        return not True
+
+    return not False
+
+
+
+# 2
+
+v = input(">> ")
+
+if is_even(v):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+
+
+
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    return not (n%2==0)
+
+
+
+# 2
+
+v = input(">> ")
+
+if is_even(v):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+
+
+
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    if not (n%2==0):
+
+        return True
+
+    else:
+
+        return False
+
+
+
+# 2
+
+v = input(">> ")
+
+if is_even(v):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+
+
+
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+def is_even(n):  #1
+
+    return n%2
+
+
+
+# 2
+
+v = input(">> ")
+
+if not (is_even(v)==0):
+
+    print '%d: odd'%v
+
+else:
+
+    print '%d: even'%v
+
+
+
+
+
+# CS: 2 1
+
+# CN: 2
+
+# CD: 2
+
+----------------------------------------
+
+
+
+* list 인자 전달
+
+
+
+* call by value
+
+========================================
+
+def f(n):
+
+    n=3
+
+    return
+
+
+
+a=99
+
+f(a)
+
+print a
+
+----------------------------------------
+
+def f(a):
+
+    a=3
+
+    return
+
+
+
+a=99
+
+f(a)
+
+print a
+
+========================================
+
+
+
+* call by reference
+
+========================================
+
+def f(n):
+
+    n[0]=77
+
+    n[1]=88
+
+    return
+
+
+
+a = [11, 22, 33]
+
+f(a)
+
+print a
+
+----------------------------------------
+
+
+
+========================================
+
+def f(n):
+
+    n=3
+
+    return
+
+
+
+a=99
+
+f(a)
+
+print a
+
+----------------------------------------
+
+def f(n):
+
+    n[0]=77
+
+    n[1]=88
+
+    return
+
+
+
+a = [11, 22, 33]
+
+f(a)
+
+print a
+
+----------------------------------------
+
+def f(n):
+
+    n[0]=n[0]+1
+
+    n[1]=n[1]+1
+
+    return
+
+
+
+a = [11, 22, 33]
+
+b = [44, 55, 66]
+
+f(a)
+
+f(b)
+
+print a
+
+print b
+
+----------------------------------------
+
+
+
+
+
+* 전역변수
+* 함수화
+
+1) 범위를 지정
+
+2) 입력, 반환 정함
+
+3) 함수의 틀을 작성(함수이름)
+
+4) 입력 인자를 기술
+
+5) 반환을 기술
+
+6) 소스코드 복사
+
+7) 호출부 기술
+
+
+
+===================================
+
+# step 0
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+s=0
+
+i=beg
+
+while i<=end:
+
+    s=s+i
+
+    i=i+1
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 1
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+# 
+
+s=0
+
+i=beg
+
+while i<=end:
+
+    s=s+i
+
+    i=i+1
+
+# 
+
+
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 2
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+# input: beg, end
+
+s=0
+
+i=beg
+
+while i<=end:
+
+    s=s+i
+
+    i=i+1
+
+# return: s
+
+
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 3
+
+def sum():
+
+    return
+
+
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+# input: beg, end
+
+s=0
+
+i=beg
+
+while i<=end:
+
+    s=s+i
+
+    i=i+1
+
+# return: s
+
+
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 4
+
+def sum(beg, end):
+
+    return s
+
+
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+# input: beg, end
+
+s=0
+
+i=beg
+
+while i<=end:
+
+    s=s+i
+
+    i=i+1
+
+# return: s
+
+
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 5
+
+def sum(beg, end)
+
+    s=0
+
+    i=beg
+
+    while i<=end:
+
+        s=s+i
+
+        i=i+1
+
+    return s
+
+
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+# input: beg, end
+
+# return: s
+
+
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 6-1
+
+def sum(beg, end):
+
+    s=0
+
+    i=beg
+
+    while i<=end:
+
+        s=s+i
+
+        i=i+1
+
+    return s
+
+
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+s = sum(beg,end)
+
+print 'sum =', s
+
+-----------------------------------
+
+# step 6-2
+
+def sum(beg, end):
+
+    s=0
+
+    i=beg
+
+    while i<=end:
+
+        s=s+i
+
+        i=i+1
+
+    return s
+
+
+
+beg = input('input start >> ')
+
+end = input('input end >> ')
+
+
+
+print 'sum =', sum(beg,end)
+
+-----------------------------------
+
+
+
+
+
+===================================
+
+# step 0
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+
+
+    j=j+1
+
+-----------------------------------
+
+# step 1
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    #    
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+    #
+
+    j=j+1
+
+-----------------------------------
+
+# step 2
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    # input: n1, n2, n3
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+    # return: None
+
+    j=j+1
+
+-----------------------------------
+
+# step 3
+
+def line():
+
+    return
+
+
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    # input: n1, n2, n3
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+    # return: None
+
+    j=j+1
+
+-----------------------------------
+
+# step 4
+
+def line(n1, n2, n3):
+
+    return
+
+
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    # input: n1, n2, n3
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+    # return: None
+
+    j=j+1
+
+-----------------------------------
+
+# step 5
+
+def line(n1, n2, n3):
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+    return
+
+
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    # input: n1, n2, n3
+
+    # return: None
+
+    j=j+1
+
+-----------------------------------
+
+# step 6
+
+def line(n1, n2, n3):
+
+    i=0
+
+    while i<n1:
+
+        print '.',
+
+        i=i+1
+
+    i=0
+
+    while i<n2:
+
+        print '*',
+
+        i=i+1
+
+    i=0
+
+    while i<n3:
+
+        print '.',
+
+        i=i+1
+
+    print
+
+    return
+
+
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    line(n1,n2,n3)
+
+    j=j+1
+
+-----------------------------------
+
+# step 7
+
+def section(n):
+
+    i=0
+
+    while i<n:
+
+        print '.',
+
+        i=i+1
+
+    return
+
+
+
+def line(n1, n2, n3):
+
+    section(n1)
+
+    section(n2)
+
+    section(n3)
+
+    print
+
+    return
+
+
+
+j=0
+
+while j<10:
+
+    n1 = 9-j
+
+    n2 = 1+2*j
+
+    n3 = 9-j
+
+    line(n1,n2,n3)
+
+    j=j+1
+
+-----------------------------------
+
+
+
+===================================
+
+# step 0
+
+v = input('input a number >> ')
+
+
+
+if v%2!=0:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+   
+
+-----------------------------------
+
+# step 1
+
+v = input('input a number >> ')
+
+
+
+if #v%2!=0#:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+-----------------------------------
+
+# step 2
+
+v = input('input a number >> ')
+
+
+
+# input: v
+
+# return: v%2!=0
+
+if #v%2!=0#:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+-----------------------------------
+
+# step 3
+
+def is_odd():
+
+    return
+
+
+
+v = input('input a number >> ')
+
+
+
+# input: v
+
+# return: v%2!=0
+
+if #v%2!=0#:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+
+
+-----------------------------------
+
+# step 4
+
+def is_odd(v):
+
+    return v%2!=0
+
+
+
+v = input('input a number >> ')
+
+
+
+# input: v
+
+# return: v%2!=0
+
+if #v%2!=0#:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+-----------------------------------
+
+# step 5
+
+def is_odd(v):
+
+    return v%2!=0
+
+
+
+v = input('input a number >> ')
+
+
+
+# input: v
+
+# return: v%2!=0
+
+if ##:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+-----------------------------------
+
+# step 5
+
+def is_odd(v):
+
+    return v%2!=0
+
+
+
+v = input('input a number >> ')
+
+
+
+# input: v
+
+# return: v%2!=0
+
+if ##:
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+-----------------------------------
+
+# step 6
+
+def is_odd(v):
+
+    return v%2!=0
+
+
+
+v = input('input a number >> ')
+
+
+
+if is_odd(v):
+
+    print v, '== odd'
+
+else:
+
+    print v, '== even'
+
+-----------------------------------
+
+
+
+===================================
+
+# step 0
+
+a = [11, 22, 33, 44]
+
+
+
+s=0
+
+i=0
+
+while i<len(a):
+
+    s = s + a[i]
+
+    i= i + 1
+
+
+
+print 'sum = ', s
+
+-----------------------------------
+
+# step 1
+
+a = [11, 22, 33, 44]
+
+
+
+#
+
+s=0
+
+i=0
+
+while i<len(a):
+
+    s = s + a[i]
+
+    i= i + 1
+
+#
+
+
+
+print 'sum = ', s
+
+-----------------------------------
+
+# step 2
+
+a = [11, 22, 33, 44]
+
+
+
+# input: a
+
+s=0
+
+i=0
+
+while i<len(a):
+
+    s = s + a[i]
+
+    i= i + 1
+
+# return s
+
+
+
+print 'sum = ', s
+
+-----------------------------------
+
+# step 3
+
+def sum():
+
+    return
+
+
+
+a = [11, 22, 33, 44]
+
+
+
+# input: a
+
+s=0
+
+i=0
+
+while i<len(a):
+
+    s = s + a[i]
+
+    i= i + 1
+
+# return s
+
+
+
+print 'sum = ', s
+
+-----------------------------------
+
+# step 4
+
+def sum(a):
+
+    return s
+
+
+
+a = [11, 22, 33, 44]
+
+
+
+# input: a
+
+s=0
+
+i=0
+
+while i<len(a):
+
+    s = s + a[i]
+
+    i= i + 1
+
+# return s
+
+
+
+print 'sum = ', s
+
+-----------------------------------
+
+# step 5
+
+def sum(a):
+
+    s=0
+
+    i=0
+
+    while i<len(a):
+
+        s = s + a[i]
+
+        i= i + 1
+
+    return s
+
+
+
+a = [11, 22, 33, 44]
+
+
+
+# input: a
+
+# return s
+
+
+
+print 'sum = ', s
+
+-----------------------------------
+
+# step 6
+
+def sum(a):
+
+    s=0
+
+    i=0
+
+    while i<len(a):
+
+        s = s + a[i]
+
+        i= i + 1
+
+    return s
+
+
+
+a = [11, 22, 33, 44]
+
+
+
+s = sum(a)
+
+print 'sum = ', s
+
+-----------------------------------
+
+
+
+===================================
+
+# step 0
+
+a=[11, 22, 33, 44]
+
+
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+print a
+
+-----------------------------------
+
+# step 1
+
+a=[11, 22, 33, 44]
+
+
+
+#
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+#
+
+print a
+
+-----------------------------------
+
+# step 2-1
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+# return: a
+
+print a
+
+-----------------------------------
+
+# step 3-1
+
+def increase():
+
+    return
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+# return: a
+
+print a
+
+-----------------------------------
+
+# step 4-1
+
+def increase(a):
+
+    return a
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+# return: a
+
+print a
+
+-----------------------------------
+
+# step 5-1
+
+def increase(a):
+
+    i=0
+
+    while i<len(a):
+
+        a[i]=a[i]+1
+
+        i=i+1
+
+    return a
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+# return: a
+
+print a
+
+-----------------------------------
+
+# step 6-1
+
+def increase(a):
+
+    i=0
+
+    while i<len(a):
+
+        a[i]=a[i]+1
+
+        i=i+1
+
+    return a
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+a = increase(a)
+
+print a
+
+-----------------------------------
+
+# step 2-2
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+# return: None
+
+print a
+
+-----------------------------------
+
+# step 3-2
+
+def increase():
+
+    return
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+# return: None
+
+print a
+
+-----------------------------------
+
+# step 4-2
+
+def increase(a):
+
+    return
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+i=0
+
+while i<len(a):
+
+    a[i]=a[i]+1
+
+    i=i+1
+
+# return: None
+
+print a
+
+-----------------------------------
+
+# step 5-2
+
+def increase(a):
+
+    i=0
+
+    while i<len(a):
+
+        a[i]=a[i]+1
+
+        i=i+1
+
+    return
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+# input: a
+
+# return: None
+
+print a
+
+-----------------------------------
+
+# step 6-2
+
+def increase(a):
+
+    i=0
+
+    while i<len(a):
+
+        a[i]=a[i]+1
+
+        i=i+1
+
+    return
+
+
+
+a=[11, 22, 33, 44]
+
+
+
+increase(a)
+
+print a
+
+-----------------------------------
+
+
+
+* 반복처리 패턴
+
+1) 전체처리
+
+===================================
+
+beg = input('input beg >> ')
+
+end = input('input end >> ')
+
+
+
+i=beg
+
+while i<=end:
+
+    print i,
+
+    i=i+1
+
+print
+
+-----------------------------------
+
+
+
+2) 선택처리
+
+===================================
+
+beg = input('input beg >> ')
+
+end = input('input end >> ')
+
+
+
+i=beg
+
+while i<=end:
+
+    if i%5==0:
+
+        print i,
+
+    i=i+1
+
+print
+
+-----------------------------------
+
+
+
+3) 발견처리
+
+===================================
+
+beg = input('input beg >> ')
+
+end = input('input end >> ')
+
+
+
+i=beg
+
+while i<=end:
+
+    if i%5==0:
+
+        print i,
+
+        break
+
+    i=i+1
+
+print
+
+-----------------------------------
+
+
+
+* 발견처리 패턴
+
+1) 반복문 내부처리
+
+===================================
+
+beg = input('input beg >> ')
+
+end = input('input end >> ')
+
+
+
+i=beg
+
+while i<=end:
+
+    if i%5==0:
+
+        print i, # inner processing
+
+        break
+
+    i=i+1
+
+print
+
+-----------------------------------
+
+
+
+2) 반복문 외부처리
+
+발견처리
+
+===============================
+초기화
+while 범위조건:
+    if 발견조건: # 내부처리
+        성공처리
+        break
+    증감
+
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+초기화
+while 범위조건:
+    if 발견조건:
+        break
+    증감
+
+if 범위조건: # 외부처리
+    성공처리
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+초기화
+while True:
+    if not(범위조건):
+        break
+    if 발견조건:
+        break
+    증감
+
+if 범위조건: # 외부처리
+    성공처리
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+초기화
+while True:
+    if not(범위조건) or 발견조건:
+        break
+    증감
+
+if 범위조건: # 외부처리
+    성공처리
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+초기화
+while True:
+    if not(범위조건 and not(발견조건)):
+        break
+    증감
+
+if 범위조건: # 외부처리
+    성공처리
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+초기화
+while True:
+    if not(범위조건 and not(발견조건)):
+        break
+    증감
+
+if 범위조건: # 외부처리
+    성공처리
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+초기화
+while 범위조건 and not(발견조건):
+    증감
+
+if 범위조건: # 외부처리
+    성공처리
+if not(범위조건): # 외부처리
+    실패처리
+-------------------------------
+
+
+=====================================
+def find(beg, end):
+    i=beg
+    while i<=end and not(i%5==0):
+        i=i+1
+    return i
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+i=find(beg,end)
+
+if i<=end:
+    print 'found:', i
+else:
+    print 'not found'
+-------------------------------------
+def find(beg, end):
+    i=beg
+    while i<=end:
+        if i%5==0:
+            break
+        i=i+1
+    return i
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+i=find(beg,end)
+
+if i<=end:
+    print 'found:', i
+else:
+    print 'not found'
+-------------------------------------
+def find(beg, end):
+    i=beg
+    while i<=end:
+        if i%5==0:
+            return i
+        i=i+1
+    return i
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+i=find(beg,end)
+
+if i<=end:
+    print 'found:', i
+else:
+    print 'not found'
+-------------------------------------
+
+
+=====================================
+def f(...):
+    초기화
+    while 범위조건 and not(발견조건):
+        증감
+    return 수식
+-------------------------------------
+def f(...):
+    초기화
+    while 범위조건:
+        if 발견조건:
+             break
+        증감
+    return 수식
+-------------------------------------
+def f(...):
+    초기화
+    while 범위조건:
+        if 발견조건:
+             return 수식
+        증감
+    return 수식
+-------------------------------------
+
+=====================================
+# prime
+# all x in [2,n), n%x!=0
+
+def find(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return x
+
+n = input('integer >> ')
+
+x = find(n)
+if x<n:
+    print 'divisor:', x
+else:
+    print 'not found'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0
+
+def find(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            break
+        x=x+1
+    return x
+
+n = input('integer >> ')
+
+x = find(n)
+if x<n:
+    print 'divisor:', x
+else:
+    print 'not found'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0
+
+def find(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return x
+        x=x+1
+    return x
+
+n = input('integer >> ')
+
+x = find(n)
+if x<n:
+    print 'divisor:', x
+else:
+    print 'not found'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0
+
+def find(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return x
+        x=x+1
+    return x
+
+n = input('integer >> ')
+
+if find(n)<n:
+    print 'divisor:', x
+else:
+    print 'not found'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def find(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return x
+
+n = input('integer >> ')
+
+if n>1 and not(find(n)<n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def find(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+n = input('integer >> ')
+
+if find(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            break
+        x=x+1
+    return n>1 and not(x<n)
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return n>1 and not(x<n)
+        x=x+1
+    return n>1 and not(x<n)
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return n>1 and not(True)
+        x=x+1
+    return n>1 and not(x<n)
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return False
+        x=x+1
+    return n>1 and not(x<n)
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return False
+        x=x+1
+    return n>1 and not(False)
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return False
+        x=x+1
+    return n>1
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n:
+        if n%x==0:
+            return False
+        x=x+1
+    return n>1
+
+n = input('integer >> ')
+
+if is_prime(n):
+    print 'prime'
+else:
+    print 'not prime'
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=beg
+while n<=end:
+    if is_prime(n):
+        print n,
+    n=n+1
+print
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=beg
+while n<=end:
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    if n>1 and not(x<n):
+        print n,
+    n=n+1
+print
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+s=0
+n=beg
+while n<=end:
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    if n>1 and not(x<n):
+        print n,
+        s=s+n
+    n=n+1
+print
+print 'sum =', s
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+s=0
+n=beg
+while n<=end:
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    if n>1 and not(x<n):
+        if s>0:
+            print '+',
+        print n,
+        s=s+n
+    n=n+1
+print '=', s
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=beg
+while n<=end:
+    if is_prime(n):
+        print 'min prime:', n
+        break
+    n=n+1
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=beg
+while n<=end:
+    if is_prime(n):
+        break
+    n=n+1
+    
+if n<=end:
+    print 'min prime:', n
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=beg
+while n<=end and not(is_prime(n)):
+    n=n+1
+    
+if n<=end:
+    print 'min prime:', n
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=end
+while n>=beg:
+    if is_prime(n):
+        print 'max prime:', n
+        break
+    n=n-1
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=end
+while n>=beg:
+    if is_prime(n):
+        break
+    n=n-1
+    
+if n>=beg:
+    print 'max prime:', n
+-------------------------------------
+# prime
+# all x in [2,n), n%x!=0, (n>1)
+
+def is_prime(n):
+    x=2
+    while x<n and not(n%x==0):
+        x=x+1
+    return n>1 and not(x<n)
+
+beg = input('beg >> ')
+end = input('end >> ')
+
+n=end
+while n>=beg and not(is_prime(n)):
+    n=n-1
+    
+if n>=beg:
+    print 'max prime:', n
+-------------------------------------
+
+* 4진법 5자리 수의 다음 수 구하기
+=====================================
+ls = [3, 2, 1, 3, 3]
+
+print ls
+
+i=0
+while i<len(ls):
+    if ls[i]==3:
+        ls[i]=0
+    i=i+1
+
+print ls
+-------------------------------------
+ls = [3, 2, 1, 3, 3]
+
+print ls
+
+i=len(ls)-1
+while i>=0:
+    if ls[i]==3:
+        ls[i]=0
+    i=i-1
+
+print ls
+-------------------------------------
+ls = [3, 2, 1, 3, 3]
+
+print ls
+
+i=len(ls)-1
+while i>=0:
+    if ls[i]!=3:
+        break
+    if ls[i]==3:
+        ls[i]=0
+    i=i-1
+
+print ls
+-------------------------------------
+ls = [3, 2, 1, 3, 3]
+
+print ls
+
+i=len(ls)-1
+while i>=0:
+    if ls[i]!=3:
+        ls[i]=ls[i]+1
+        break
+    if ls[i]==3:
+        ls[i]=0
+    i=i-1
+
+print ls
+-------------------------------------
+# 4, 5
+# [2, 3, 3, 3, 3]
+# [3, 0, 0, 0, 0]
+
+# [3, 3, 3, 3, 3]
+# [0, 0, 0, 0, 0]
+
+# good example
+# [3, 2, 1, 3, 3]
+# [3, 2, 2, 0, 0]
+
+# back --> front
+# ls[i]==3: ls[i]-->0, repeat
+# ls[i]!=3: increase ls[i], break
+
+ls = [3, 2, 1, 3, 3]
+
+print ls
+
+i=len(ls)-1
+while i>=0:
+    if ls[i]!=3:
+        ls[i]=ls[i]+1
+        break
+    if ls[i]==3:
+        ls[i]=0
+    i=i-1
+
+print ls
+-------------------------------------
+# 4, 5
+# [2, 3, 3, 3, 3]
+# [3, 0, 0, 0, 0]
+
+# [3, 3, 3, 3, 3]
+# [0, 0, 0, 0, 0]
+
+# good example
+# [3, 2, 1, 3, 3]
+# [3, 2, 2, 0, 0]
+
+# back --> front
+# ls[i]==3: ls[i]-->0, repeat
+# ls[i]!=3: increase ls[i], break
+
+ls = [0]*5
+
+n=4**5
+j=0
+while j<n:
+    print ls
+    i=len(ls)-1
+    while i>=0:
+        if ls[i]!=3:
+            ls[i]=ls[i]+1
+            break
+        if ls[i]==3:
+            ls[i]=0
+        i=i-1
+
+    j=j+1
+-------------------------------------
+# 10, 3
+# good example
+# [5, 9, 9]
+# [6, 0, 0]
+
+# back --> front
+# ls[i]==9: ls[i]-->0, repeat
+# ls[i]!=9: increase ls[i], break
+
+ls = [0]*3
+
+n=10**3
+j=0
+while j<n:
+    print ls
+    i=len(ls)-1
+    while i>=0:
+        if ls[i]!=9:
+            ls[i]=ls[i]+1
+            break
+        if ls[i]==9:
+            ls[i]=0
+        i=i-1
+
+    j=j+1
+-------------------------------------
+# k, sz
+
+# back --> front
+# ls[i]==k-1: ls[i]-->0, repeat
+# ls[i]!=k-1: increase ls[i], break
+
+k=10
+sz=3
+
+ls = [0]*sz
+n=k**sz
+j=0
+while j<n:
+    print ls
+    i=len(ls)-1
+    while i>=0:
+        if ls[i]!=k-1:
+            ls[i]=ls[i]+1
+            break
+        if ls[i]==k-1:
+            ls[i]=0
+        i=i-1
+
+    j=j+1
+-------------------------------------
+# k, sz
+
+# back --> front
+# ls[i]==k-1: ls[i]-->0, repeat
+# ls[i]!=k-1: increase ls[i], break
+
+k=10
+sz=3
+
+ls = [0]*sz
+n=k**sz
+j=0
+while j<n:
+    print ls
+    i=len(ls)-1
+    while i>=0:
+        if ls[i]!=k-1:
+            break
+        if ls[i]==k-1:
+            ls[i]=0
+        i=i-1
+    if i>=0:
+        ls[i]=ls[i]+1
+
+    j=j+1
+-------------------------------------
+# k, sz
+
+# back --> front
+# ls[i]==k-1: ls[i]-->0, repeat
+# ls[i]!=k-1: increase ls[i], break
+
+k=10
+sz=3
+
+ls = [0]*sz
+n=k**sz
+j=0
+while j<n:
+    print ls
+    i=len(ls)-1
+    while i>=0 and not(ls[i]!=k-1):
+        if ls[i]==k-1:
+            ls[i]=0
+        i=i-1
+    if i>=0:
+        ls[i]=ls[i]+1
+
+    j=j+1
+-------------------------------------
+# k, sz
+
+# back --> front
+# ls[i]==k-1: ls[i]-->0, repeat
+# ls[i]!=k-1: increase ls[i], break
+
+k=10
+sz=3
+
+ls = [0]*sz
+n=k**sz
+j=0
+while j<n:
+    print ls
+    i=len(ls)-1
+    while i>=0 and not(ls[i]!=k-1):
+        ls[i]=0
+        i=i-1
+    if i>=0:
+        ls[i]=ls[i]+1
+
+    j=j+1
+-------------------------------------
+# k, sz
+
+# back --> front
+# ls[i]==k-1: ls[i]-->0, repeat
+# ls[i]!=k-1: increase ls[i], break
+
+def next(ls,k):
+    i=len(ls)-1
+    while i>=0 and not(ls[i]!=k-1):
+        ls[i]=0
+        i=i-1
+    if i>=0:
+        ls[i]=ls[i]+1
+    return
+
+k=10
+sz=3
+
+ls = [0]*sz
+n=k**sz
+j=0
+while j<n:
+    print ls
+    next(ls,k)
+    j=j+1
+-------------------------------------
+# 4, 5
+# [3, 2, 2, 0, 0]
+# [3, 2, 1, 3, 3]
+
+# back-->front
+# ls[i]==0: ls[i]-->3, repeat
+# ls[i]!=0: decrease ls[i], break
+
+# k, sz
+# back --> front
+# ls[i]==0: ls[i]-->k-1, repeat
+# ls[i]!=0: decrease ls[i], break
+
+def next(ls,k):
+    i=len(ls)-1
+    while i>=0 and not(ls[i]!=0):
+        ls[i]=k-1
+        i=i-1
+    if i>=0:
+        ls[i]=ls[i]-1
+    return
+
+k=4
+sz=5
+
+ls = [k-1]*sz
+n=k**sz
+j=0
+while j<n:
+    print ls
+    next(ls,k)
+    j=j+1
+-------------------------------------
+
+* 바람직한 반환값
+=====================================
+def f(n):
+    if n%2==0:
+        return 'two'
+    if n%3==0:
+        return 'three'
+    if n%5==0:
+        return 'five'
+    # return None --> not desirable
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+def f(n):
+    if n%2==0:
+        return 'two'
+    if n%3==0:
+        return 'three'
+    if n%5==0:
+        return 'five'
+    return 'other' # desirable
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+def f(n):
+    if n%2==0:
+        return 'two'
+    if n%3==0:
+        return 'three'
+    if n%2!=0 and n%3!=0: # oops
+        return 'other' 
+    # return None
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+def f(n):
+    if n%2==0:
+        return 'two'
+    if n%3==0:
+        return 'three'
+    return 'other' # good
+    # return None
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+def f(n):
+    if n%2==0:
+        return 'two'
+    if n%3==0:
+        return 'three'
+    else:
+        return 'other' # not bad
+    # return None
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+
+* 재귀호출(recursive call, recursion)
+- 정의: 함수의 자신에 대한 호출
+
+=====================================
+def f(n):
+    if n==0:
+        return 1
+    return n * f(n-1) # calls itself
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+
+
+* 점화식을 사용한 재귀호출 --> easy
+=====================================
+# 5! = 5*4*3*2*1
+# f(n) = 1,        (n=0)  (정지부)
+#      = n*f(n-1), (n>0)  (가속부)
+
+def f(n):
+    if n==0:
+        return 1
+    if n>0:
+        return n*f(n-1)
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+# 5! = 5*4*3*2*1
+# f(n) = 1,        (n=0)
+#      = n*f(n-1), (n>0)
+
+def f(n):
+    if n==0:
+        return 1
+    return n*f(n-1)
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+# 5! = 5*4*3*2*1
+# f(n) = 1,        (n=0)
+#      = n*f(n-1), (n>0)
+
+def f(n):
+    if n==0:
+        return 1
+    else:
+        return n*f(n-1)
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+
+=====================================
+# 5! = 5*4*3*2*1
+# f(n) = 1,        (n=0)
+#      = n*f(n-1), (n>0)
+
+def f(n):
+    if n==0:
+        return 1
+    return n*f(n-1)
+
+v = input('integer >> ') # v<0 --> RE
+print f(v)
+-------------------------------------
+# 5! = 5*4*3*2*1
+# f(n) = 1,        (n=0)
+#      = n*f(n-1), (n>0)
+
+def f(n):
+    if n==0:
+        return 1
+    return n*f(n-1)
+
+v = input('integer >> ')
+if v<0: # good idea
+    print f(v)
+-------------------------------------
+# 5! = 5*4*3*2*1
+# f(n) = 1,        (n=0)
+#      = n*f(n-1), (n>0)
+
+def f(n):
+    if n<0: # good idea
+        return 0
+    if n==0:
+        return 1
+    return n*f(n-1)
+
+v = input('integer >> ')
+print f(v)
+-------------------------------------
+
+* 점화식 없는 재귀호출
+=====================================
+def f(ls,beg,end,v): # [beg,end)
+    if not(beg<end):
+        return end  # not [beg,end)
+    if ls[beg]==v:
+        return beg
+    return f(ls,beg+1,end,v)
+    
+#     0   1   2   3   4   5   6 
+ls = [66, 11, 22, 55, 77, 33, 44]
+
+v=input('value >> ')
+beg=0
+end=len(ls)
+retv = f(ls,beg,end,v)
+if beg<=retv and retv<end:
+    print 'found'
+else:
+    print 'not found'
+-------------------------------------
+def f(ls,beg,end,v): # [beg,end)
+    if not(beg<end):
+        return end  # not [beg,end)
+    
+    m = (beg+end)/2
+    if ls[m]==v:
+        return m
+
+    # [beg,m)
+    retv = f(ls,beg,m,v)
+    if beg<=retv and retv<m:
+        return retv
+    
+    # [m+1,end)
+    retv = f(ls,m+1,end,v)
+    if m+1<=retv and retv<end:
+        return retv
+
+    return end
+    
+#     0   1   2   3   4   5   6 
+ls = [66, 11, 22, 55, 77, 33, 44]
+
+v=input('value >> ')
+beg=0
+end=len(ls)
+retv = f(ls,beg,end,v)
+if beg<=retv and retv<end:
+    print 'found:', retv
+else:
+    print 'not found'
+    

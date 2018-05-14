@@ -1,0 +1,63 @@
+SQL : structured Query Language : 구조화 질의어 관계형 데이터베이스 관리 시스템
+관리를 위해 특수목적 언어
+SQLite 구글 안드로이드 운영체제에 기본 탑제된 데이터베이스
+<sql query>
+Create Table statement 
+
+(Data base)
+-Table <-- like excel, column 1, coloum 2, row1, row2 
+-Table
+-Table
+-Table
+
+schema : 개요 
+
+ex) 주차장 데이터 테이블
+	-주차장 이름
+	-주차장 주소
+	-주차장 gps값
+	-등등
+
+예) 카카오톡 친구목록
+	-이미지 url
+	-친구이름
+	-친구상테메시지		<--얘를 정의한다
+	-친구전화번호
+	-등등
+
+<MVC>
+
+ ) Model
+	-string url
+	-string name
+	-string message
+	-string phoneNumber
+	
+ 	get method 와 set method 를 사용하여 다시 재정의하거나 가져온다. 
+
+ ) View : 뷰는 걍 뷰
+  
+
+ ) Controller : 변화를 모델에 전달
+
+
+일반적cycle  model-->controller --> view --> controller --> model
+안드로이드는 view와 controller 가 묶여있다. 
+
+view : activity or fragment 
+
+안드로이드에선 M + V & C
+데이터 빼는 모델
+
+계산기를 만든다 치면 
+-previous
+-current 
+-etc
+
+어떤 연산을 통해 불러와줘야 한다면, view 가 controller에게 전달 controller 가 model 에 주고
+model 이 계산하고 다시 controller 로 view 로 한다 
+public 만들어서 method getResult return previous+current 반환 <--모델안의 메소드
+
+
+https://developer.android.com/training/data-storage/sqlite#java
+
