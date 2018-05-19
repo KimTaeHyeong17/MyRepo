@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="64dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="64dp">
+
+    <ImageView
+        android:id="@+id/main_item_student_image"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:maxWidth="150px"
+        android:maxHeight="150px"
+        android:src="@drawable/icon_student_small"/>
+    <TextView
+        android:id="@+id/main_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/main_item_student_image"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"/>
+    <ImageView
+        android:id="@+id/main_item_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:src="@drawable/icon_student_large"/>
+</RelativeLayout>

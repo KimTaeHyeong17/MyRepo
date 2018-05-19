@@ -28,7 +28,7 @@ public SqliteopenHelper(Context context) {
     super( context,DATABASE_NAME,null,DATABASE_VERSION);
 }
 //japsjfpajgjra gprajiadj'ig ha
-    pighreapihpivjs
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {

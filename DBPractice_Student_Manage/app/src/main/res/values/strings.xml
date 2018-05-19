@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Student_Management</string>
+    <string name="main_back_end">Press again to exit</string>
+    <string name="main_list_phone_error">Has no phone number</string>
+    <string name="add_name_null">Name is Empty</string>
+    <string name="read_add_score_dialog_message">Do you add for {1} grade?</string>
+    <string name="permission_error">Has no permission</string>
+</resources>
