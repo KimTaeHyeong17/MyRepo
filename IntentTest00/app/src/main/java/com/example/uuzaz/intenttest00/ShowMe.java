@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class ShowMe extends AppCompatActivity{
+public class ShowMe extends AppCompatActivity {
 
     Button b1;
 
@@ -16,11 +16,11 @@ public class ShowMe extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sub1);
 
-        b1=(Button) findViewById(R.id.button1);
-        b1.setOnClickListener(new View.OnClickListener(){
+        b1 = (Button) findViewById(R.id.button1);
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent1);
 
             }
