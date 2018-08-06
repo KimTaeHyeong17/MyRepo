@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class Planning extends AppCompatActivity {
 
@@ -23,6 +26,18 @@ public class Planning extends AppCompatActivity {
 
     myDBHelper myHelper;
     SQLiteDatabase sqlDB;
+    //오늘 날짜 계산후 표시
+    long mNow;
+    Date mDate;
+    SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+
+    //오늘 날짜 계산후 표시
+    private String getTime() {
+        mNow = System.currentTimeMillis();
+        mDate = new Date(mNow);
+        return mFormat.format(mDate);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +78,8 @@ public class Planning extends AppCompatActivity {
             public void onClick(View v) {
                 //Toast.makeText(getApplicationContext(), "저장되었습니다.", 1000).show();
                 sqlDB = myHelper.getWritableDatabase();
-                sqlDB.execSQL("INSERT INTO groupTBL VALUES (null,null,'"
+                sqlDB.execSQL("INSERT INTO groupTBL VALUES (null,'"
+                        + getTime() + "','"
                         + editText_1.getText().toString() + "' , '"
                         + editText_2.getText().toString() + "' , '"
                         + editText_3.getText().toString() + "' , '"
@@ -108,7 +124,7 @@ public class Planning extends AppCompatActivity {
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE  groupTBL ( id int PRIMARY KEY,dt datetime default current_timestamp, gOne CHAR(50) , gTwo CHAR(50) ,gThree CHAR(50) " +
+            db.execSQL("CREATE TABLE  groupTBL ( _id INTEGER PRIMARY KEY AUTOINCREMENT ,date DATETIME, gOne CHAR(50) , gTwo CHAR(50) ,gThree CHAR(50) " +
                     ", gFour CHAR(50) , gFive CHAR(50) , gSix CHAR(50) , gSeven CHAR(50) , gEight CHAR(50)" +
                     " ,gNine CHAR(50) , gTen CHAR(50) ,gElven CHAR(50) ,gTwelve CHAR(50), gThirte CHAR(50) " +
                     ",gFourte CHAR(50) , gFifte CHAR(50) , gSixte CHAR(50), gSevente CHAR(50), gEighte CHAR(50) " +

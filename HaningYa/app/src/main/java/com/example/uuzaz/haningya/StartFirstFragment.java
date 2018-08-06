@@ -19,7 +19,6 @@ class StartFirstFragment extends android.support.v4.app.Fragment {
     long mNow;
     Date mDate;
     SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd");
-    TextView mTextView;
 
 
     public StartFirstFragment() {
@@ -31,15 +30,13 @@ class StartFirstFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
-
         View view = inflater.inflate(R.layout.fragment_start_first, container, false);
-
-        TextView mTextView= (TextView) view.findViewById(R.id.date);
-        mTextView.setText(getTime());
-        return inflater.inflate(R.layout.fragment_start_first, container, false);
+        TextView text= (TextView) view.findViewById(R.id.date);
+        text.setText(getTime());
+        return view;
     }
+
+
     //오늘 날짜 계산후 표시
     private String getTime() {
         mNow = System.currentTimeMillis();

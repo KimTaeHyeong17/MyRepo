@@ -34,16 +34,17 @@
             android:textSize="30sp"/>
         <TextView
             android:id="@+id/date"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:textColor="#ffffff"/>
+            android:textColor="#ffffff"
+            android:text="2018.03.08"/>
         <TextView
             android:gravity="center"
             android:textColor="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  입니다. "
+            android:text=" 입니다. "
             android:textSize="30sp"/>
 
     </LinearLayout>
