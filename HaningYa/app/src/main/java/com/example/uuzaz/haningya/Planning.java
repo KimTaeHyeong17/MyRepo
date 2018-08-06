@@ -2,6 +2,7 @@ package com.example.uuzaz.haningya;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -16,20 +17,21 @@ import android.widget.Toast;
 
 public class Planning extends AppCompatActivity {
 
-    SQLiteDatabase db;
-    MySQLiteOpenHelper helper;
     Button btnInsert;
+    EditText editText_1, editText_2, editText_3, editText_4, editText_5, editText_6, editText_7, editText_8, editText_9, editText_10, editText_11, editText_12,
+            editText_13, editText_14, editText_15, editText_16, editText_17, editText_18, editText_19, editText_20, editText_21, editText_22, editText_23, editText_24;
 
-
-    EditText editText_1, editText_2,editText_3,editText_4,editText_5,editText_6,editText_7,editText_8,editText_9,editText_10,editText_11,editText_12,
-            editText_13,editText_14,editText_15,editText_16,editText_17,editText_18,editText_19,editText_20,editText_21,editText_22,editText_23,editText_24;
-
+    myDBHelper myHelper;
+    SQLiteDatabase sqlDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planning);
 
+        //db
+        myHelper = new myDBHelper(this);
+        btnInsert = (Button) findViewById(R.id.btn_insert);
 
         editText_1 = (EditText) findViewById(R.id.editText_1);
         editText_2 = (EditText) findViewById(R.id.editText_2);
@@ -57,79 +59,71 @@ public class Planning extends AppCompatActivity {
         editText_24 = (EditText) findViewById(R.id.editText_24);
 
 
-
         btnInsert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //입력 버튼 리스너
+                //Toast.makeText(getApplicationContext(), "저장되었습니다.", 1000).show();
+                sqlDB = myHelper.getWritableDatabase();
+                sqlDB.execSQL("INSERT INTO groupTBL VALUES (null,null,'"
+                        + editText_1.getText().toString() + "' , '"
+                        + editText_2.getText().toString() + "' , '"
+                        + editText_3.getText().toString() + "' , '"
+                        + editText_4.getText().toString() + "' , '"
+                        + editText_5.getText().toString() + "' , '"
+                        + editText_6.getText().toString() + "' , '"
+                        + editText_7.getText().toString() + "' , '"
+                        + editText_8.getText().toString() + "' , '"
+                        + editText_9.getText().toString() + "' , '"
+                        + editText_10.getText().toString() + "' , '"
+                        + editText_11.getText().toString() + "' , '"
+                        + editText_12.getText().toString() + "' , '"
+                        + editText_13.getText().toString() + "' , '"
+                        + editText_14.getText().toString() + "' , '"
+                        + editText_15.getText().toString() + "' , '"
+                        + editText_16.getText().toString() + "' , '"
+                        + editText_17.getText().toString() + "' , '"
+                        + editText_18.getText().toString() + "' , '"
+                        + editText_19.getText().toString() + "' , '"
+                        + editText_20.getText().toString() + "' , '"
+                        + editText_21.getText().toString() + "' , '"
+                        + editText_22.getText().toString() + "' , '"
+                        + editText_23.getText().toString() + "' , '"
+                        + editText_24.getText().toString() + "');");
+                sqlDB.close();
                 Toast.makeText(getApplicationContext(), "입력됨",
                         Toast.LENGTH_SHORT).show();
+
+
+                Intent MyIntent = new Intent(Planning.this, MainActivity.class);
+                startActivity(MyIntent);
             }
         });
 
+
+
     }/**end of oncreate **/
-
-    // insert
-
-    public void insert(String name, int age, String address) {
-        db = helper.getWritableDatabase(); // db 객체를 얻어온다. 쓰기 가능
-        ContentValues values = new ContentValues();
-        // db.insert의 매개변수인 values가 ContentValues 변수이므로 그에 맞춤
-        // 데이터의 삽입은 put을 이용한다.
-        values.put("name", name);
-        values.put("age", age);
-        values.put("address", address);
-        db.insert("student", null, values); // 테이블/널컬럼핵/데이터(널컬럼핵=디폴트)
-        // tip : 마우스를 db.insert에 올려보면 매개변수가 어떤 것이 와야 하는지 알 수 있다.
-
-    }
-
-    // select
-
-    public void select() {
-
-
-
-        // 1) db의 데이터를 읽어와서, 2) 결과 저장, 3)해당 데이터를 꺼내 사용
-
-
-
-        db = helper.getReadableDatabase(); // db객체를 얻어온다. 읽기 전용
-
-        Cursor c = db.query("student", null, null, null, null, null, null);
-
-
-
-        /*
-
-         * 위 결과는 select * from student 가 된다. Cursor는 DB결과를 저장한다. public Cursor
-
-         * query (String table, String[] columns, String selection, String[]
-
-         * selectionArgs, String groupBy, String having, String orderBy)
-
-         */
-
-
-
-        while (c.moveToNext()) {
-
-            // c의 int가져와라 ( c의 컬럼 중 id) 인 것의 형태이다.
-
-            int _id = c.getInt(c.getColumnIndex("_id"));
-
-            String name = c.getString(c.getColumnIndex("name"));
-
-            int age = c.getInt(c.getColumnIndex("age"));
-
-            String address = c.getString(c.getColumnIndex("address"));
-
-            Log.i("db", "id: " + _id + ", name : " + name + ", age : " + age
-
-                    + ", address : " + address);
-
+    public class myDBHelper extends SQLiteOpenHelper {
+        public myDBHelper(Context context) {
+            super(context, "groupDB", null, 1);
         }
 
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL("CREATE TABLE  groupTBL ( id int PRIMARY KEY,dt datetime default current_timestamp, gOne CHAR(50) , gTwo CHAR(50) ,gThree CHAR(50) " +
+                    ", gFour CHAR(50) , gFive CHAR(50) , gSix CHAR(50) , gSeven CHAR(50) , gEight CHAR(50)" +
+                    " ,gNine CHAR(50) , gTen CHAR(50) ,gElven CHAR(50) ,gTwelve CHAR(50), gThirte CHAR(50) " +
+                    ",gFourte CHAR(50) , gFifte CHAR(50) , gSixte CHAR(50), gSevente CHAR(50), gEighte CHAR(50) " +
+                    ",gNineTe CHAR(50) , gThenty CHAR(50), gTwentyone CHAR(50) ,gTwentytwo CHAR(50) , gTwentythree CHAR(50)" +
+                    ",gTwentyfour CHAR(50));");
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            db.execSQL("DROP TABLE IF EXISTS groupTBL");
+            onCreate(db);
+        }
     }
+
+
 
 }
 
