@@ -117,6 +117,7 @@ public class Planning extends AppCompatActivity {
 
 
     }/**end of oncreate **/
+
     public class myDBHelper extends SQLiteOpenHelper {
         public myDBHelper(Context context) {
             super(context, "groupDB", null, 1);

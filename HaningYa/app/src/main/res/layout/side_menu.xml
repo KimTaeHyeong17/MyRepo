@@ -30,15 +30,16 @@
         android:text="도움말"
         android:textColor="@color/colorPrimary" />
     <Button
-
+        android:paddingTop="10dp"
+        android:gravity="center_horizontal"
         android:textColor="@color/colorPrimary"
         android:background="#ffffff"
         android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-
         android:text="닫기" />
+
+
 
 
 </LinearLayout>
