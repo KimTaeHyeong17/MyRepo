@@ -12,4 +12,5 @@
         android:layout_height="match_parent"
         android:textSize="40dp"
         android:text="앱소개가 들어가겠찌"/>
+
 </FrameLayout>
