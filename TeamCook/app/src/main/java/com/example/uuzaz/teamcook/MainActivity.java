@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton btn_chat;
+    ImageButton btn_profile;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        btn_chat = (ImageButton) findViewById(R.id.id_chat);
-        btn_chat.setOnClickListener(new View.OnClickListener() {
+        btn_profile = (ImageButton) findViewById(R.id.id_profile);
+        btn_profile.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("WrongConstant")
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                Intent intent = new Intent(MainActivity.this, MainProfileActivity.class);
                 startActivity(intent);
             }
         });
