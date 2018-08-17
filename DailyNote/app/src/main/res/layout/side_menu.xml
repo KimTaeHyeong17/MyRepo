@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimary"
-        android:background="@drawable/border_textview"
         android:text="지난일정"
         android:textColor="@color/colorPrimary" />
 
@@ -39,8 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="닫기"
-            android:backgroundTint="@color/colorPrimary"
-            android:background="@drawable/border_textview"/>
+            android:backgroundTint="@color/colorPrimary"/>
     </LinearLayout>
 
 

@@ -12,8 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical"
-        android:background="@drawable/border_textview">
+        android:orientation="vertical">
 
         <TextView
             android:layout_margin="10dp"
@@ -31,28 +30,22 @@
             android:gravity="center">
 
             <Button
-                style="@style/Base.Widget.AppCompat.Button.Borderless"
-                android:background="@drawable/border_button"
-                android:textColor="#ffffff"
                 android:id="@+id/btn_start"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="계획짜기"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="13dp"/>
             <Button
-                style="@style/Base.Widget.AppCompat.Button.Borderless"
-                android:textColor="#ffffffff"
-                android:background="@drawable/border_button"
+                android:layout_marginLeft="13dp"
                 android:id="@+id/btn_already"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:text="이미계획짰다"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="30dp"
                 android:layout_marginBottom="20dp"/>
 
 
