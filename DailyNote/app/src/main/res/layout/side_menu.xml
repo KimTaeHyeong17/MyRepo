@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+
+
+    <!--<Button
+        android:id="@+id/btn_lookback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="일주일돌아보기"
+        android:textColor="@color/colorPrimary" />-->
+
+    <Button
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_margin="10dp"
+        android:id="@+id/button_viewAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/border_textview"
+        android:text="지난일정"
+        android:textColor="@color/colorPrimary" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="닫기"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/border_textview"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+
