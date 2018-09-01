@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="166dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#faa285">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/info_picture_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+
+            />
+        <ImageView
+            android:id="@+id/love_up"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignRight="@id/info_picture_s"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_love" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@drawable/gradation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="12">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/info_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="2018.7.26"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"/>
+                <TextView
+                    android:id="@+id/d_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:text="D - 10"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5">
+                <TextView
+                    android:id="@+id/info_name_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffefe"
+                    android:textSize="20dp"
+                    android:text="공모전 이름"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <Button
+                    android:id="@+id/team_search"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp"
+                    android:text="팀 찾기"
+                    android:background="@drawable/button"
+                    />
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="0dp"/>
+                <Button
+                    android:id="@+id/team_create"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp"
+                    android:text="팀 생성"
+                    android:background="@drawable/button"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
