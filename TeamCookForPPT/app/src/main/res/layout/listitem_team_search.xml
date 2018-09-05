@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="71dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="12">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="3"
+            >
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/circle"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/summit_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:text="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:text="/" />
+                <TextView
+                    android:id="@+id/team_number_full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:text="5" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical">
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+                <TextView
+                android:id="@+id/team_search_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#090909"
+                android:textSize="17dp"
+                android:text="해커톤 공모전 같이 준비해요~!"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:weightSum="5.6"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/d_day_team_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cccccc"
+                        android:textColor="#080808"
+                        android:textSize="13dp"
+                        android:text="D - 10"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="right|center_vertical">
+                    <TextView
+                        android:id="@+id/team_leader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#faa285"
+                        android:text="팀장"
+                        android:textSize="12dp"
+                        />
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/team_leader_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#050505"
+                        android:text="김기현"
+                        android:textSize="12dp"
+                        android:layout_marginRight="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical">
+                    <Button
+                        android:id="@+id/team_summit_btn"
+                        android:layout_width="80dp"
+                        android:layout_height="22dp"
+                        android:textColor="#0a0a0a"
+                        android:textSize="12dp"
+                        android:text="신청하기"
+                        android:background="@drawable/button"
+                        android:backgroundTint="#faa285"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#faa285">
+    </LinearLayout>
+
+
+</LinearLayout>

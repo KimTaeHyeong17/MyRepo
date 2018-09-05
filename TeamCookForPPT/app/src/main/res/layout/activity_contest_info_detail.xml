@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="#ffffff"
+    tools:context=".ContestInfoDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/id_back02"
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#ffffff"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back" />
+
+
+        <ImageView
+            android:layout_marginLeft="18dp"
+            android:layout_width="130dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_logo_top" />
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/info_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        />
+
+                    <!--android:background="@drawable/round_border_1"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+    -->
+                    <ImageView
+                        android:id="@+id/love_up"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignRight="@id/info_picture"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/icon_love" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/info_picture"
+                        android:layout_marginLeft="10dp"
+                        >
+
+                        <!--android:background="@drawable/round_border_1"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"-->
+
+                        <RelativeLayout
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:id="@+id/info_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:text="공모전명 : "
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/info_name_output"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_toRightOf="@id/info_name"
+                                android:gravity="center_vertical"
+                                android:text="인천시 SNS 통합명칭 공모전 "
+                                android:textSize="15dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/line1">
+
+                            <TextView
+                                android:id="@+id/info_dadline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:text="마감날짜 : "
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/info_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_toRightOf="@id/info_dadline"
+                                android:gravity="center_vertical"
+                                android:text="2018. 7. 26"
+                                android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/d_day"
+                                android:layout_toRightOf="@id/info_date"
+                                android:layout_margin="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:background="@drawable/button_round_edge"
+                                android:textColor="#ffffff"
+                                android:textSize="13dp"
+                                android:text="D - 10"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/line3"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/line2">
+
+                            <TextView
+                                android:id="@+id/info_host"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:text="주최 : "
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/info_host_input"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_toRightOf="@id/info_host"
+                                android:gravity="center_vertical"
+                                android:text="인천광역시"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/line4"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/line3">
+
+                            <TextView
+                                android:id="@+id/info_topic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:text="공모주제 : "
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/info_topic_input"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_toRightOf="@id/info_topic"
+                                android:gravity="center_vertical"
+                                android:text=" 인천시 SNS 이름짓기"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/line5"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/line4">
+
+                            <TextView
+                                android:id="@+id/info_resultday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:text="결과 발표 : "
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/info_resultday_input"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_toRightOf="@id/info_resultday"
+                                android:gravity="center_vertical"
+                                android:text="2018. 9 .6"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/line6"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/line5">
+
+                            <TextView
+                                android:id="@+id/info_teamnumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:text="생성된 팀 수 : "
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/info_teamnumber_input"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_toRightOf="@+id/info_teamnumber"
+                                android:gravity="center_vertical"
+                                android:text="40"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <Button
+                    android:id="@+id/id_generate_info_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="#FEDACF"
+                    android:text="팀 찾기" />
+
+                <Button
+                    android:id="@+id/id_make_team_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_background"
+                    android:text="팀 생성하기" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>
