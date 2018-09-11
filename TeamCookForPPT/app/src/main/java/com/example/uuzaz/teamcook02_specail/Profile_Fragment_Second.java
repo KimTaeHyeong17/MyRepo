@@ -12,8 +12,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Profile_Fragment_Second extends Fragment {
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+public class Profile_Fragment_Second extends Fragment {
 
     public Profile_Fragment_Second() {
         // Required empty public constructor
@@ -30,38 +35,9 @@ public class Profile_Fragment_Second extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_profile__fragment__second, container, false);
 
-        EditText name = (EditText) v.findViewById(R.id.profilefragmentsecond_edittext_name);
-        EditText school = (EditText) v.findViewById(R.id.profilefragmentsecond_edittext_schoolname);
-        EditText major = (EditText) v.findViewById(R.id.profilefragmentsecond_edittext_major);
-        EditText grade = (EditText) v.findViewById(R.id.profilefragmentsecond_edittext_grade);
-        EditText specialty = (EditText) v.findViewById(R.id.profilefragmentsecond_edittext_specialty);
-        EditText awards = (EditText) v.findViewById(R.id.profilefragmentsecond_edittext_awards);
-
-
-
-        Button start = (Button) v.findViewById(R.id.id_generate);
-
-        start.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        Button back = (Button) v.findViewById(R.id.id_cancel);
-        back.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
-
-            }
-        });
         return v;
 
-    }
+    } /** end of oncreate view **/
+
+
 }
