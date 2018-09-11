@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "979267815040",
+    "firebase_url": "https://teamcookforppt.firebaseio.com",
+    "project_id": "teamcookforppt",
+    "storage_bucket": "teamcookforppt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979267815040:android:e1422448ff8e849b",
+        "android_client_info": {
+          "package_name": "com.example.uuzaz.teamcook02_specail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979267815040-oolpd6s6bvuponqordnflmgj15u2736r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uuzaz.teamcook02_specail",
+            "certificate_hash": "7d21a037296e82c6ff5bff54bbb0c1382b5bbbd4"
+          }
+        },
+        {
+          "client_id": "979267815040-kl3edkg2qn50qok3t5o8fbnor6u9u0fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkC3BS9eJiKyirMdZH7YUKEFD4sP4BH1E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979267815040-kl3edkg2qn50qok3t5o8fbnor6u9u0fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

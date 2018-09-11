@@ -14,14 +14,18 @@ public class ContestInfoAdapter extends ArrayAdapter<String> {
 
     String[] names;
     int[] flags;
+    String [] date;
+    String [] dday;
     Context mContext;
 
 
-    public ContestInfoAdapter(@NonNull Context context, String[] countryNames, int[] countryFlags) {
+    public ContestInfoAdapter(@NonNull Context context, String[] countryNames, int[] countryFlags,String[] contestdate,String[] contestdday) {
         super(context, R.layout.listitem_info);
 
         this.names = countryNames;
         this.flags = countryFlags;
+        this.date = contestdate;
+        this.dday = contestdday;
         this.mContext = context;
     }
 
@@ -41,6 +45,8 @@ public class ContestInfoAdapter extends ArrayAdapter<String> {
             convertView = mInflater.inflate(R.layout.listitem_info, parent, false);
             mViewHolder.mFlag = (ImageView) convertView.findViewById(R.id.listitem_imageview);
             mViewHolder.mName = (TextView) convertView.findViewById(R.id.listitem_textview);
+            mViewHolder.mdate = (TextView) convertView.findViewById(R.id.listitem_date);
+            mViewHolder.mdday = (TextView) convertView.findViewById(R.id.list_item_dday);
             convertView.setTag(mViewHolder);
 
         }else{
@@ -49,11 +55,13 @@ public class ContestInfoAdapter extends ArrayAdapter<String> {
 
         mViewHolder.mFlag.setImageResource(flags[position]);
         mViewHolder.mName.setText(names[position]);
+        mViewHolder.mdate.setText(date[position]);
+        mViewHolder.mdday.setText(dday[position]);
         return convertView;
     }
 
     static class ViewHolder {
         ImageView mFlag;
-        TextView mName;
+        TextView mName,mdate,mdday;
     }
 }
