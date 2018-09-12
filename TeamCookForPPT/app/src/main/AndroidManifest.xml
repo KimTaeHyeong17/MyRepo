@@ -24,7 +24,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name=".FirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -48,7 +47,8 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ContestInfoDetail" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".Chat_Talk_Activity"></activity>
     </application>
 
 </manifest>

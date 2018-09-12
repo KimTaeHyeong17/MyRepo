@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -36,6 +37,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
 
+
         //ListView02
         TalkList_ListViewAdapter adapter;
         ListView listView;
@@ -47,6 +49,13 @@ public class ChatActivity extends AppCompatActivity {
         // 리스트뷰 참조 및 Adapter달기
         listView = (ListView) findViewById(R.id.list_talklist) ;
         listView.setAdapter(adapter) ;
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ChatActivity.this,Chat_Talk_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
         // 첫 번째 아이템 추가.

@@ -1,11 +1,13 @@
 package com.example.uuzaz.teamcook02_specail;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -37,6 +39,8 @@ public class Chat_Fragment_Talk extends Fragment {
         // 리스트뷰 참조 및 Adapter달기
         listView = (ListView) view.findViewById(R.id.list_talklist) ;
         listView.setAdapter(adapter) ;
+
+
 
 
         // 첫 번째 아이템 추가.
