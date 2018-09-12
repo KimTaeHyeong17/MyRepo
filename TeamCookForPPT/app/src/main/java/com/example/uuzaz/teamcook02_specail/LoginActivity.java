@@ -51,10 +51,6 @@ public class LoginActivity extends AppCompatActivity {
                 String email = email_login.getText().toString().trim();
                 String pwd = pwd_login.getText().toString().trim();
 
-                if(email!=null && pwd!=null){
-
-                    //나중에한다(아이디 비번 빈문자열이면 꺼짐)
-                }
 
                 firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {

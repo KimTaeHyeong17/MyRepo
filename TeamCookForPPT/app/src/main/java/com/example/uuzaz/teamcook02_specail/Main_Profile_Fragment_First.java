@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.service.autofill.Dataset;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,6 @@ public class Main_Profile_Fragment_First extends Fragment {
     TextView name, school, major, grade, specialty, awards;
     String namestr, schoolstr, majorstr, gradestr, specialtystr, awardsstr;
     DatabaseReference databaseReference;
-    String token = FirebaseInstanceId.getInstance().getToken();
 
 
     public Main_Profile_Fragment_First() {
@@ -46,31 +46,23 @@ public class Main_Profile_Fragment_First extends Fragment {
         grade = (TextView) view.findViewById(R.id.mainprofilefragmentfirst_textview_grade);
         specialty = (TextView) view.findViewById(R.id.mainprofilefragmentfirst_textview_specialty);
         awards = (TextView) view.findViewById(R.id.mainprofilefragmentfirst_textview_awards);
+
+        String token = FirebaseInstanceId.getInstance().getToken();
+
+
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
         databaseReference.child(token)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
-                        for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                            namestr = dataSnapshot1.child("name").getValue(String.class);
-                            name.setText(namestr);
-
-                            schoolstr = dataSnapshot1.child("school").getValue(String.class);
-                            school.setText(schoolstr);
-
-                            majorstr = dataSnapshot1.child("major").getValue(String.class);
-                            major.setText(majorstr);
-
-                            gradestr = dataSnapshot1.child("awards").getValue(String.class);
-                            grade.setText(gradestr);
-
-                            awardsstr = dataSnapshot1.child("awards").getValue(String.class);
-                            awards.setText(awardsstr);
-
-                        }
+                        name.setText(user.name);
+                        school.setText(user.school);
+                        major.setText(user.major);
+                        grade.setText(user.grade);
+                        specialty.setText(user.specialty);
+                        awards.setText(user.awards);
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 

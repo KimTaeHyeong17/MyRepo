@@ -41,21 +41,27 @@ public class SignupActivity extends AppCompatActivity {
                 String email = email_join.getText().toString().trim();
                 String pwd = pwd_join.getText().toString().trim();
 
-                firebaseAuth.createUserWithEmailAndPassword(email,pwd)
-                        .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    Intent intent = new Intent(SignupActivity.this,LoginActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                }else{
-                                    Toast.makeText(SignupActivity.this,"등록에러",Toast.LENGTH_SHORT).show();
-                                    return ;
-                                }
+                if (email.contains("pusan.ac.kr")) {
+                    firebaseAuth.createUserWithEmailAndPassword(email, pwd)
+                            .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(SignupActivity.this, "정상 등록 되었습니다.", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(SignupActivity.this, "등록에러", Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
 
-                            }
-                        });
+                                }
+                            });
+                } else {
+                    Toast.makeText(SignupActivity.this, "학교 웹메일을 사용해주세요.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
 
             }/** onclick **/

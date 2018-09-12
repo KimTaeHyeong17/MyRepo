@@ -9,10 +9,6 @@
     tools:context=".Chat_Fragment_List"
     android:background="#FEE9E2">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="채팅창일꺼임"/>
 
 
 </LinearLayout>
