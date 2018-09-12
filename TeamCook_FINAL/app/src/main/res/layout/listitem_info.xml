@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="166dp">
+    <ImageView
+        android:src="@drawable/info_pic01"
+        android:scaleType="centerCrop"
+        android:id="@+id/listitem_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/gradation"
+        android:layout_gravity="center_horizontal|bottom">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linear_date_dday"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp">
+            <TextView
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffffff"
+                android:paddingVertical="3dp"
+                android:id="@+id/listitem_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018.09.08" />
+            <TextView
+                android:id="@+id/list_item_dday"
+                android:paddingHorizontal="9dp"
+                android:paddingVertical="2dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D-10"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/listitem_textview"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@id/linear_date_dday"
+            android:paddingVertical="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="공모전이름"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

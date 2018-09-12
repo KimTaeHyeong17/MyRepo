@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alertview_box"
+    android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/team_search_name_at_teamlist"
+                android:layout_width="225dp"
+                android:layout_height="match_parent"
+                android:text="창업동아리 공모전 같이 준비해요~!"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="25dp"/>
+            <ImageButton
+                android:id="@+id/back_btn_x"
+                android:layout_marginLeft="10dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="#ffffff"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_back_round" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#fbaf96"/>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fbaf96"
+                    android:text="창동공모전"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fbaf96"
+                        android:textSize="15dp"
+                        android:text="팀장"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0a0a0a"
+                        android:textSize="15dp"
+                        android:text="김재인"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/team_search_contents_at_teamlist"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="해커톤 준비하는 개발자입니다. 플랫폼 관련된 아이디어를 가지고 있고요. 기획도 가능합니다. 세련되면서 심플한 디자인 가능하신 디자이너 구하고, 말 잘하는 PT구합니다. 다음주 시간 돼시는 분 연락주시길 바랍니다 ㅎㅎ"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!--<Button
+                android:id="@+id/feedback_btn"
+                android:layout_width="65dp"
+                android:layout_height="22dp"
+                android:textColor="#0a0a0a"
+                android:textSize="11dp"
+                android:text="피드백"
+                android:background="@drawable/button"
+                android:backgroundTint="#faa285"
+                />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp"/>
+            <Button
+                android:id="@+id/chatting_btn"
+                android:layout_width="65dp"
+                android:layout_height="22dp"
+                android:textColor="#0a0a0a"
+                android:textSize="11dp"
+                android:text="채팅"
+                android:background="@drawable/button"
+                android:backgroundTint="#faa285"
+                />-->
+
+            <Button
+                android:id="@+id/feedback_btn01"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_background"
+                android:text="피드백"
+                android:textColor="#000000" />
+            <Button
+                android:id="@+id/chatting_btn01"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_background"
+                android:text="채팅"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
